@@ -1,15 +1,16 @@
 import MyButton from "./MyButton";
-const Card = ({titre, children}) =>{
+import style from "./Card.module.css"
+const Card = ({titre, children}) => {
     let handleClick = () =>{
-        alert("C'est fini");
+        alert("Tu as compris");
     }
-    return(
-        <div>
-            <h1> {titre} </h1>
-            {children}
-            <MyButton titre = {"click"} fonction={handleClick}/>
-        </div>
-    )
+ return(
+    <div className={style.toto}>
+        <h1> {titre} </h1>
+        <p> {children} </p>
+        <MyButton text={"click on me"} handleClick={handleClick} />
+    </div>
+ )
 }
 
 export default Card;
